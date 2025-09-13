@@ -72,12 +72,12 @@ SARIMA(p,d,q)(P,D,Q,s)
 **Parámetros seleccionados:**
 | Parámetro | Valor | Justificación |
 |------------|-------|---------------|
-| p          | ?     | Basado en PACF |
-| d          | ?     | Basado en pruebas ADF/KPSS |
-| q          | ?     | Basado en ACF |
-| P          | ?     | Estacionalidad detectada |
-| D          | ?     | Estacionalidad y KPSS |
-| Q          | ?     | Basado en ACF estacional |
+| p          | 1     | Basado en PACF |
+| d          | 1     | Basado en pruebas ADF/KPSS |
+| q          | 1     | Basado en ACF |
+| P          | 0     | Estacionalidad detectada |
+| D          | 1     | Estacionalidad y KPSS |
+| Q          | 1     | Basado en ACF estacional |
 | s          | 12    | Mensualidad |
 
 ---
@@ -102,8 +102,9 @@ MAPE = \frac{100\%}{n} \sum_{t=1}^{n} \left| \frac{y_t - \hat{y}_t}{y_t} \right|
 
 | Métrica  | Valor |
 |-----------|-------|
-| MAPE (%)  | ??    |
+| MAPE (%)  | 97.7% |
 
+En el Notebook sale como un error del 2.32%, pero es porque esta invertido en realidad es el 97.7%
 ---
 
 ## 📌 Conclusiones
